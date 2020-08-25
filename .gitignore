@@ -1,1 +1,2 @@
-modules/aws/*/.terraform/
+modules/aws/*/.terra*/
+examples/*/.terra*/
