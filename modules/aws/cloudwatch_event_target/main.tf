@@ -1,5 +1,6 @@
 resource "aws_cloudwatch_event_target" this {
-  rule      = var.myrule
-  target_id = var.mytargetid
-  arn       = var.myarn
+  arn       = var.arn
+  count     = var.enabled ? 1 : 0
+  rule      = var.rule
+  target_id = var.target_id
 }
