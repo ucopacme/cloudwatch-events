@@ -1,15 +1,15 @@
 data "aws_iam_policy_document" "this" {
   statement {
     actions = [
-      "SNS:GetTopicAttributes",
-      "SNS:SetTopicAttributes",
       "SNS:AddPermission",
-      "SNS:RemovePermission",
       "SNS:DeleteTopic",
-      "SNS:Subscribe",
+      "SNS:GetTopicAttributes",
       "SNS:ListSubscriptionsByTopic",
       "SNS:Publish",
-      "SNS:Receive"
+      "SNS:Receive",
+      "SNS:RemovePermission",
+      "SNS:SetTopicAttributes",
+      "SNS:Subscribe"
     ]
 
     condition {
