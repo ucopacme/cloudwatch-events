@@ -1,4 +1,5 @@
 provider "aws" {
+  region = "us-east-1"
 }
 
 module "aws_caller_identity" {
@@ -27,9 +28,10 @@ module "cloudwatch_event_rule" {
 }
 
 module "cloudwatch_event_target" {
-  arn       = module.sns_topic.arn
-  enabled   = var.enabled
-  rule      = module.cloudwatch_event_rule[0].name
+  arn     = module.sns_topic.arn
+  enabled = var.enabled
+  #rule      = module.cloudwatch_event_rule.[0].name
+  rule      = "Detect-Local-User-Creations"
   source    = "../cloudwatch_event_target/"
   target_id = "UnAuthorizedLocalUsers"
 }
