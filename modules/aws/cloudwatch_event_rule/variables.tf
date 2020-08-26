@@ -9,7 +9,7 @@ variable "description" {
 }
 
 variable "enabled" {
-  description = "Define state of CloudWatch Event Rule"
+  description = "to be or not to be"
   default     = true
   type        = bool
 }

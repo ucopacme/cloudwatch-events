@@ -4,13 +4,13 @@ variable "arn" {
 }
 
 variable "enabled" {
-  description = "Define state of CloudWatch Event Rule"
+  description = "Define state of CloudWatch Event Target"
   default     = true
   type        = bool
 }
 
 variable "rule" {
-  description = "Rule to be used within the CloudWatch Event"
+  description = "Rule to be used within the CloudWatch Target"
   type        = string
 }
 
