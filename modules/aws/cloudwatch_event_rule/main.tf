@@ -1,7 +1,7 @@
 resource "aws_cloudwatch_event_rule" "this" {
   name          = var.name
+  count         = var.enabled ? 1 : 0
   description   = var.description
-  is_enabled    = var.enabled
   event_pattern = <<PATTERN
 {
   "detail-type": [

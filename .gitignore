@@ -1,1 +1,3 @@
-modules/aws/*/.terraform/
+modules/aws/*/.terra*/
+modules/aws/*/terraform.tfstate*
+examples/*/.terra*/
