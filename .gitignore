@@ -1,3 +1,5 @@
 modules/aws/*/.terra*/
 modules/aws/*/terraform.tfstate*
 examples/*/.terra*/
+.terraform
+terraform.tfstate*
