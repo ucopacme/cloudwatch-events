@@ -3,10 +3,11 @@ module "aws_caller_identity" {
 }
 
 module "sns_topic" {
-  display_name  = "CHS-DEV IAM Alert"
+  display_name  = "Local IAM User Alert"
   email_address = "david.rivera@ucop.edu"
-  source        = "github.com/asecurecloud/tf_sns_email"
-  stack_name    = "tf-SnsTopic-chs-dev"
+  enabled       = var.enabled
+  stack_name    = "tf-SnsTopic"
+  source        = "./modules/sns_topic/"
 }
 
 
