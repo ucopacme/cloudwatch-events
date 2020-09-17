@@ -1,12 +1,9 @@
 data "aws_caller_identity" "this" {
 }
 data "aws_iam_account_alias" "this" {}
-#module "aws_caller_identity" {
-#  source = "./modules/caller_identity/"
-#}
 
 module "sns_topic" {
-  display_name  =  data.aws_iam_account_alias.this.account_alias
+  display_name  = data.aws_iam_account_alias.this.account_alias
   email_address = "david.rivera@ucop.edu"
   enabled       = var.enabled
   stack_name    = "tf-SnsTopic"
@@ -15,7 +12,6 @@ module "sns_topic" {
 
 
 module "iam_policy_document" {
-#  accountid = module.aws_caller_identity.caller_identity_out
   #accountid = data.aws_caller_identity.this.account_id
   accountid = "123456789012"
   policyid  = "__default_policy_ID"
