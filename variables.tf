@@ -21,3 +21,8 @@ variable "region" {
   description = "aws region"
   type        = string
 }
+
+variable "email" {
+  type        = string
+  description = "Email address to send notifications to"
+}
