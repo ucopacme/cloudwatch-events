@@ -4,7 +4,7 @@ data "aws_iam_account_alias" "this" {}
 
 module "sns_topic" {
   display_name  = data.aws_iam_account_alias.this.account_alias
-  email_address = "david.rivera@ucop.edu"
+  email_address = var.email
   enabled       = var.enabled
   stack_name    = "tf-SnsTopic"
   source        = "./modules/sns_topic/"
