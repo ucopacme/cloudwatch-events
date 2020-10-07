@@ -12,8 +12,7 @@ resource "aws_cloudwatch_event_rule" "this" {
       "iam.amazonaws.com"
     ],
     "eventName": [
-      "CreateUser",
-      "AddUserToGroup"
+      "CreateUser"
    ]
   }
 }
